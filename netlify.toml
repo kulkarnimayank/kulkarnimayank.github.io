@@ -1,0 +1,3 @@
+[build]
+  command = "echo \"url: $URL\" > _config.host.yml && bundle exec jekyll build --config _config.yml,_config.host.yml"
+  publish = "_site"
