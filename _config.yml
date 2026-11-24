@@ -1,0 +1,16 @@
+title: Mayank Kulkarni
+tagline: Automating SEO for the AI era
+description: "Mayank Kulkarni is a Bangalore-based SEO automation builder. He founded Rank Rebels, is building LocalSEOAgent.ai, and works on one idea: automating SEO for the AI era."
+author: Mayank Kulkarni
+url: "https://kulkarnimayank.github.io"
+baseurl: ""
+home_url: "https://mayankkulkarni.com/"
+headshot: "https://mayankkulkarni.com/mayank-kulkarni-1080.jpg"
+header_image: "https://mayankkulkarni.com/mayank-kulkarni-header-x.jpg"
+permalink: /:title/
+timezone: Asia/Kolkata
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
