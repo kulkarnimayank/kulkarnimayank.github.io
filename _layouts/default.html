@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 | escape }}">
+<meta name="author" content="{{ site.author }}">
+<link rel="canonical" href="{{ page.canonical_url | default: page.url | absolute_url }}">
+<link rel="me" href="{{ site.home_url }}">
+<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+<meta property="og:image" content="{{ page.image | default: site.header_image }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+:root{--bg:#0B1217;--panel:#111B22;--text:#E8F1F2;--muted:#93A2AB;--accent:#3DD6D0;--line:#1E2B34}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+.banner{display:block;width:100%;max-height:320px;object-fit:cover}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+nav{display:flex;gap:20px;flex-wrap:wrap;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);font-family:"JetBrains Mono",monospace;font-size:14px}
+nav .brand{font-weight:700;color:var(--text);text-decoration:none;margin-right:auto}
+nav a{text-decoration:none}
+main{padding:36px 0 56px}
+h1,h2,h3{font-family:"JetBrains Mono",monospace;line-height:1.25}
+h1{font-size:30px;margin:0 0 8px}
+h2{font-size:21px;margin:40px 0 12px}
+.sub{color:var(--accent);font-family:"JetBrains Mono",monospace;margin:0 0 20px}
+.muted{color:var(--muted);font-size:14px}
+.hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.hero img{width:132px;height:132px;border-radius:50%;object-fit:cover}
+.posts{list-style:none;padding:0;margin:0}
+.posts li{padding:16px 0;border-bottom:1px solid var(--line)}
+.posts a{font-weight:600;text-decoration:none;font-size:18px}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:15px}
+article img{max-width:100%;height:auto}
+pre,code{font-family:"JetBrains Mono",monospace;font-size:14px}
+pre{background:var(--panel);padding:14px;border-radius:8px;overflow:auto}
+footer{border-top:1px solid var(--line);padding:24px 0 48px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<img class="banner" src="{{ site.header_image }}" alt="Mayank Kulkarni: Automating SEO for the AI era" width="1500" height="500">
+<div class="wrap">
+<nav>
+<a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+<a href="{{ '/' | relative_url }}">Articles</a>
+<a href="{{ '/about/' | relative_url }}">About</a>
+<a href="{{ site.home_url }}" rel="me">mayankkulkarni.com</a>
+</nav>
+<main>
+{{ content }}
+</main>
+<footer>
+{{ site.title }} &middot; {{ site.tagline }} &middot; <a href="{{ site.home_url }}" rel="me">mayankkulkarni.com</a>
+</footer>
+</div>
+</body>
+</html>
