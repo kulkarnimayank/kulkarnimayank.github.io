@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="hero">
+<img src="{{ site.headshot }}" alt="Mayank Kulkarni" width="132" height="132">
+<div>
+<h1>Mayank Kulkarni</h1>
+<p class="sub">{{ site.tagline }}</p>
+</div>
+</div>
+<p>{{ site.description }}</p>
+<p><a href="{{ site.home_url }}" rel="me">mayankkulkarni.com</a> &middot; <a href="{{ '/about/' | relative_url }}">About</a></p>
+
+<h2>Articles</h2>
+{% if site.posts.size > 0 %}
+<ul class="posts">
+{% for post in site.posts %}
+<li>
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+<div class="muted">{{ post.date | date: "%-d %B %Y" }}</div>
+</li>
+{% endfor %}
+</ul>
+{% else %}
+<p class="muted">Articles on SEO automation and local SEO will appear here.</p>
+{% endif %}
