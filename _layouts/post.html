@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article>
+<h1>{{ page.title }}</h1>
+<p class="muted">By <a href="{{ site.home_url }}" rel="author me">{{ site.author }}</a> &middot; <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+{% if page.canonical_url %}<p class="note">Originally published at <a href="{{ page.canonical_url }}">{{ page.canonical_url | remove: "https://" | split: "/" | first }}</a>.</p>{% endif %}
+{{ content }}
+</article>
+<p class="muted"><a href="{{ '/' | relative_url }}">&larr; All articles</a></p>
